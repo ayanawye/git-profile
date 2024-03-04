@@ -1,1 +1,1 @@
-export const d = 'hd'
+export const hi = ''

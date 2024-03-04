@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.nav{
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    margin-bottom: 30px;
+    color: $link-color;
+    .active{
+        color: $white-color;
+    }
+}
