@@ -1,1 +1,26 @@
 @import '../../../../shared/styles/variables';
+
+.profile{
+    padding: 20px 30px;
+    margin: 0 20px;
+    border: 1px solid $border-color;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 20px;
+    color: $white-color;
+    background: #30363d;
+    background: #161b22;
+    .names{
+        display: flex;
+        column-gap: 20px;
+        margin-bottom: 10px;
+    }
+    .bio{
+        margin: 10px 0;
+    }
+    .contacts{
+        display: flex;
+        gap: 20px;
+    }
+}

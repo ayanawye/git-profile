@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Link.module.scss";
 
 interface Props {
-  href: string;
+  href: string | any;
   children: React.ReactNode;
   blank?: boolean;
 }

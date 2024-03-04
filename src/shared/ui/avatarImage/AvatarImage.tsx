@@ -2,7 +2,7 @@ import React from 'react';
 import style from './AvatarImage.module.scss';
 
 interface Props {
-    src: string;
+    src: string | undefined;
     alt: string;
 }
 
@@ -10,7 +10,7 @@ function AvatarImage(props: Props) {
     const {src, alt} = props
 
     return (
-        <img src={src} alt={alt} />
+        <img className={style.image} src={src} alt={alt} />
     )
 }
 
