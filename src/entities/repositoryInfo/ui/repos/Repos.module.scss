@@ -1,0 +1,32 @@
+@import "../../../../shared/styles/variables";
+
+.wrapper {
+  padding: 10px;
+
+  .switch {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+
+    .tab {
+      padding: 10px;
+      cursor: pointer;
+      color: $link-color;
+      background-color: $dark-gray-color;
+
+      border: 1px solid $border-color;
+      border-radius: 10px;
+    }
+
+    .activeTab {
+      color: $white-color;
+      border-color: $white-color;
+    }
+  }
+
+  .repos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

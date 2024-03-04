@@ -1,4 +1,5 @@
 import React from 'react'
+import { SearchUser } from '../../features';
 
 interface Props {}
 
@@ -7,7 +8,7 @@ function SearchUserPage(props: Props) {
 
     return (
         <div>
-            user
+            <SearchUser />
         </div>
     )
 }

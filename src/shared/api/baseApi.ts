@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { getToken } from "../helper/getToken";
 
 export const baseApi = createApi({
-  tagTypes: ["USER"],
+  tagTypes: ["USER", "REPO"],
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl: process.env.REACT_APP_USER_DATA_URL,

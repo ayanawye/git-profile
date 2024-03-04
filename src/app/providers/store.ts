@@ -2,14 +2,14 @@ import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { rootReducer } from "./reducer";
-import { userApi } from "../../entities/userProfile";
 import { getTokenApi } from "../../entities/userProfile/api/getToken";
+import { baseApi } from "../../shared/api";
 
 export const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
-        userApi.middleware,
+        baseApi.middleware,
         getTokenApi.middleware,
     ),
 });

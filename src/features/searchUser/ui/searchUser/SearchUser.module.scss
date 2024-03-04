@@ -1,0 +1,31 @@
+@import "../../../../shared/styles/variables";
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    padding: 20px;
+    color: $white-color;
+    
+    input {
+        width: 100%;
+        background-color: $dark-gray-color;
+        border: 1px solid $border-color;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: large;
+    }
+
+    .totalCount {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .users {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

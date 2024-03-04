@@ -7,13 +7,6 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
-import {
-  // GitHubAuth,
-  // NotFoundPage,
-  // ProfilePage,
-  // SearchUserPage,
-  // UserRepoPage,
-} from "../pages";
 import { lazy } from "react";
 
 const GitHubAuth = lazy(() => import('../pages/auth/index'))
