@@ -10,13 +10,7 @@ function Repos() {
   const [repoType, setRepoType] = useState<string>("public");
   const user = useAppSelector((state) => state.user.user);
 
-  const { data } = useGetReposQuery(
-    {
-      user: user?.login || "",
-      type: repoType,
-    },
-    { skip: !user }
-  );
+  const { data } = useGetReposQuery(user?.login || "", { skip: !user });
 
   const switchRepoType = (type: string): void => {
     if (type) setRepoType(type);
@@ -30,9 +24,7 @@ function Repos() {
     <div className={styles.wrapper}>
       <div className={styles.switch}>
         <div
-          className={`${styles.tab} ${
-            repoType === "public" && styles.activeTab
-          }`}
+          className={`${styles.tab} ${repoType === "public" && styles.activeTab}`}
           onClick={() => switchRepoType("public")}
         >
           Public
