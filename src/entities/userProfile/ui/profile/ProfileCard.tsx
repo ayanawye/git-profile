@@ -4,7 +4,7 @@ import { AvatarImage, BoldTitle, Link } from "../../../../shared";
 import { useAppSelector } from "../../../../app/providers/store";
 
 function ProfileCard() {
-  const { user: data } = useAppSelector(state => state.user);
+  const { user: data } = useAppSelector((state) => state.user);
 
   return (
     <div className={style.profile}>

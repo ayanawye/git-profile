@@ -2,15 +2,15 @@ import React from 'react';
 import style from './AuthButton.module.scss';
 import {  loginWithGithub } from '../../by-oauth';
 
-interface Props {}
-
-function AuthButton(props: Props) {
+function AuthButton() {
     const login = () => {
         loginWithGithub()
     }
 
     return (
-        <button onClick={login}>Login with GitHub</button>
+        <div className={style.btn}>
+            <button onClick={login}>Login with GitHub</button>
+        </div>
     )
 }
 

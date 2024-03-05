@@ -10,6 +10,7 @@ interface Props {
 
 function Pagination(props: Props) {
   const { usersPerPage, totalUsers, paginate, currentPage } = props;
+  
   const pageNumber = [];
   for (let i = 1; i <= Math.ceil(totalUsers / usersPerPage); i++) {
     pageNumber.push(i);
@@ -23,20 +24,18 @@ function Pagination(props: Props) {
           pageNumber.map((number) => (
             <li
               key={number}
-              className={currentPage == number ? style.active : ""}
+              className={currentPage === number ? style.active : ""}
               onClick={() => paginate(number)
               }
             >
+              {number}
               <p
                 className={style.page}
               >
-                {number}
               </p>
             </li>
           ))
-        ) : (
-          <div></div>
-        )}
+        ) : ''}
       </ul>
     </div>
   );

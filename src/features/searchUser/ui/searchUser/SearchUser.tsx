@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import style from "./SearchUser.module.scss";
-import { Loader, useDebounce } from "../../../../shared";
+import { Loader, checkToken, useDebounce } from "../../../../shared";
 import {
   useLazyGetReposByUserQuery,
   useLazySearchUserQuery,
@@ -30,12 +30,15 @@ function SearchUser() {
 
   useEffect(() => {
     if (search.length) {
-      searchUser({q: debouncedSearch, page: currentPage});
+      searchUser({ q: debouncedSearch, page: currentPage });
     }
   }, [debouncedSearch, currentPage]);
 
+  useEffect(() => {
+    checkToken();
+  }, []);
   const paginate = (pageNumber: number) => {
-    setCurrentPage(pageNumber)
+    setCurrentPage(pageNumber);
   };
 
   return (

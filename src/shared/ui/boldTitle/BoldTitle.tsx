@@ -1,5 +1,4 @@
 import React from "react";
-import style from "./BoldTitle.module.scss";
 
 interface Props {
   children: React.ReactNode;

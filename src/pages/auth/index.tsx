@@ -1,11 +1,7 @@
 import React from 'react'
 import GitHubAuth from '../../features/auth';
 
-interface Props {}
-
-function AuthPage(props: Props) {
-    const {} = props
-
+function AuthPage() {
     return (
         <GitHubAuth/>
     )

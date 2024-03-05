@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Repos.module.scss";
 import { useAppSelector } from "../../../../app/providers/store";
 import { useGetReposQuery } from "../../api/repositoryApi";
 import RepoCard from "../repoCard/RepoCard";
 import { IRepo } from "../../model/types";
+import { checkToken } from "../../../../shared";
 
-interface Props {}
-
-function Repos(props: Props) {
+function Repos() {
   const [repoType, setRepoType] = useState<string>("public");
   const user = useAppSelector((state) => state.user.user);
 
@@ -22,6 +21,10 @@ function Repos(props: Props) {
   const switchRepoType = (type: string): void => {
     if (type) setRepoType(type);
   };
+
+  useEffect(() => {
+    checkToken();
+  }, []);
 
   return (
     <div className={styles.wrapper}>

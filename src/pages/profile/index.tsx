@@ -1,11 +1,7 @@
 import React from "react";
 import { Profile } from "../../widgets";
 
-interface Props {}
-
-function ProfilePage(props: Props) {
-  const {} = props;
-
+function ProfilePage() {
   return <Profile />;
 }
 
