@@ -6,5 +6,5 @@ export { default as Navigation } from "./ui/navigation/Navigation";
 export { default as Loader } from "./ui/loader/Loader";
 export { getGitHubCode } from "./helper/getCode";
 export { getToken } from "./helper/getToken";
-export { checkToken } from './helper/checkToken';
+export { checkAuth } from './helper/checkAuth';
 export { useDebounce } from "./lib/hooks/useDebounce";

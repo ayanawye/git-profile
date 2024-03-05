@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import style from "./SearchUser.module.scss";
-import { Loader, checkToken, useDebounce } from "../../../../shared";
+import { Loader, checkAuth, useDebounce } from "../../../../shared";
 import {
   useLazyGetReposByUserQuery,
   useLazySearchUserQuery,
@@ -35,7 +35,7 @@ function SearchUser() {
   }, [debouncedSearch, currentPage]);
 
   useEffect(() => {
-    checkToken();
+    checkAuth();
   }, []);
   const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber);

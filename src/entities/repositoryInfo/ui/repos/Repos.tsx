@@ -4,7 +4,7 @@ import { useAppSelector } from "../../../../app/providers/store";
 import { useGetReposQuery } from "../../api/repositoryApi";
 import RepoCard from "../repoCard/RepoCard";
 import { IRepo } from "../../model/types";
-import { checkToken } from "../../../../shared";
+import { checkAuth } from "../../../../shared";
 
 function Repos() {
   const [repoType, setRepoType] = useState<string>("public");
@@ -17,7 +17,7 @@ function Repos() {
   };
 
   useEffect(() => {
-    checkToken();
+    checkAuth();
   }, []);
 
   return (
