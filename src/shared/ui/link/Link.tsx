@@ -1,5 +1,4 @@
 import React from "react";
-import style from "./Link.module.scss";
 
 interface Props {
   href: string | any;

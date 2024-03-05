@@ -1,15 +1,12 @@
-import React from 'react'
+import React from "react";
+import { SearchUser } from "../../features";
 
-interface Props {}
-
-function SearchUserPage(props: Props) {
-    const {} = props
-
-    return (
-        <div>
-            user
-        </div>
-    )
+function SearchUserPage() {
+  return (
+    <div>
+      <SearchUser />
+    </div>
+  );
 }
 
 export default SearchUserPage;

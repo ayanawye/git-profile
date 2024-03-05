@@ -1,0 +1,31 @@
+@import '../../../../shared/styles/variables';
+
+.pagination{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container{
+        display: flex;
+        overflow-x: scroll;
+    }
+    & li{
+      list-style: none;
+      color: white;
+      margin-right: 8px;
+      border: 1px solid #5f5f5f;
+      border-radius: 8px;
+      display: inline-block;
+      padding: 10px 27px;
+      border-radius: 8px;
+      transition: 0.2s;
+      cursor: pointer;
+      &:hover{
+        background-color: #161b22;
+        transition: 0.2s;
+      }
+    }
+  }
+  .pagination li.active{
+    background-color: #5f5f5f;
+  }

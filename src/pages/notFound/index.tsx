@@ -1,11 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-interface Props {}
-
-function NotFoundPage(props: Props) {
-    const {} = props
-
+function NotFoundPage() {
     return (
         <div>
             not NotFoundPage

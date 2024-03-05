@@ -1,11 +1,7 @@
 import React from "react";
 import style from "./LogoItem.module.scss";
 
-interface Props {}
-
-function LogoItem(props: Props) {
-  const {} = props;
-
+function LogoItem() {
   return (
     <div className={style.top}>
       <svg
